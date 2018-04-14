@@ -34,6 +34,12 @@ optimoida [PATH [PATH ...]]
 ## :inbox_tray: Installation
 
 ```
+$ pip install optimoida
+```
+
+or
+
+```
 $ git clone git@github.com:alice1017/optimoida.git
 $ cd optimoida
 $ python setup.py build install

@@ -46,6 +46,12 @@ argument
 
 ::
 
+    $ pip install optimida
+
+or
+
+::
+
     $ git clone git@github.com:alice1017/optimoida.git
     $ cd optimoida
     $ python setup.py build install
