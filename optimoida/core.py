@@ -46,6 +46,26 @@ def _optimize_file(path):
             spinner.write(log)
 
 
+def _optimize_dir(path):
+
+    for current, dirs, files in os.walk(path):
+
+        if current.find("git") != -1:
+            continue
+
+        absfiles = map((lambda f: os.path.join(current, f)), files)
+
+        for _file in absfiles:
+
+            try:
+                check_extension(_file)
+                _optimize_file(_file)
+
+            except IOError:
+                print logger.warn(
+                    "This is not image file: '{0}'".format(_file))
+
+
 def optimize(paths):
 
     for path in paths:
@@ -54,3 +74,7 @@ def optimize(paths):
 
             check_extension(path)
             _optimize_file(path)
+
+        elif os.path.isdir(path):
+
+            _optimize_dir(path)
