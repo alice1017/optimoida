@@ -6,6 +6,10 @@
 
 The **optimoida** is a command line application to **optimize image file** (`jpg`, `png` only) by [**TinyPNG**](https://tinypng.com/)
 
+### DEMO
+
+[![asciicast](https://asciinema.org/a/177778.png)](https://asciinema.org/a/177778)
+
 ## :hourglass: Prepare to use optimoida
 
 ### 1. Get TinyPNG API Key

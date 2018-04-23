@@ -9,6 +9,11 @@ optimoida
 The **optimoida** is a command line application to **optimize image
 file** (``jpg``, ``png`` only) by `TinyPNG <https://tinypng.com/>`__
 
+DEMO
+~~~~~~~~~~~~~~~~~~~~~~
+
+|DEMO|
+
 ⌛️ Prepare to use optimoida
 ------------------------------------
 
@@ -64,3 +69,5 @@ or
 
 .. |forthebadge| image:: http://forthebadge.com/images/badges/made-with-python.svg
    :target: http://forthebadge.com
+ .. |DEMO| image:: https://asciinema.org/a/177778.png
+   :target: https://asciinema.org/a/177778
