@@ -15,7 +15,6 @@ def main():
         sys.exit(0)
 
     args = parser.parse_args()
-    print args
 
     try:
         return_code = optimize(args.path)
