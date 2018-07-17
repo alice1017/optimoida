@@ -12,10 +12,10 @@ class Logger(object):
     def info(self, msg, flag=None):
 
         if flag:
-            return huepy.run("{0} {1}".format(flag, msg))
+            return huepy.good("{0} {1}".format(flag, msg))
 
         else:
-            return huepy.run(msg)
+            return huepy.good(msg)
 
     def warn(self, msg):
 

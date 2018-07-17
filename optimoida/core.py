@@ -2,12 +2,14 @@
 # coding: utf-8
 
 import os
+import huepy
 import tinify
 
 from yaspin import yaspin
 from tinify import (
     ClientError, ServerError, ConnectionError)
 
+from optimoida.utils import getsize
 from optimoida.config import get_api_key
 from optimoida.logging import (
     SUCCESS, FAILURE, logger)
@@ -29,18 +31,34 @@ def check_extension(path):
 def _optimize_file(path):
 
     tinify.key = get_api_key()
-    log_msg = "optimized: {0}".format(path)
 
     with yaspin(text="Optimizing", color="cyan") as spinner:
 
         try:
+
+            before_size = getsize(path)
+
             source = tinify.from_file(path)
             source.to_file(path)
 
-            log = logger.info(log_msg, flag=SUCCESS)
+            after_size = getsize(path)
+
+            # compare
+            if before_size == after_size:
+                before = before_size
+                after = after_size
+
+            else:
+                before = huepy.blue(before_size)
+                after = huepy.yellow(after_size)
+
+            log_msg = "{0} {1} → {2}"
+            msg = log_msg.format(os.path.basename(path), before, after)
+            log = logger.info(msg, flag=SUCCESS)
 
         except (ClientError, ServerError, ConnectionError):
-            log = logger.error(log_msg, flag=FAILURE)
+
+            log = logger.error(os.path.basename(path), flag=FAILURE)
 
         finally:
             spinner.write(log)
