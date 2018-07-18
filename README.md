@@ -8,7 +8,7 @@ The **optimoida** is a command line application to **optimize image file** (`jpg
 
 ### DEMO
 
-[![asciicast](https://asciinema.org/a/177778.png)](https://asciinema.org/a/177778)
+[![asciicast](https://asciinema.org/a/192294.png)](https://asciinema.org/a/192294)
 
 ## :hourglass: Prepare to use optimoida
 
