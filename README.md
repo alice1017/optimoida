@@ -53,3 +53,10 @@ $ python setup.py build install
 
 1. Forks on [Github](https://github.com/alice1017/optimoida)
 2. Find a bug? Send a pull request to get it merged and published.
+
+## CHANGELOG
+
+### 1.1.0 - Chenges arround the log message
+
+* Appended a file size information.
+* Changed the file path from abspath to filename only.
