@@ -56,7 +56,7 @@ $ python setup.py build install
 
 ## CHANGELOG
 
-### 1.1.0 - Chenges arround the log message
+### 1.1.0 - Changes around the log message
 
 * Appended a file size information.
 * Changed the file path from abspath to filename only.
